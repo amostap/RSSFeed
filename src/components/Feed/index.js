@@ -1,5 +1,6 @@
 import { Col, Thumbnail, Button } from 'react-bootstrap';
 import React, { Component, PropTypes } from 'react';
+import { Link } from 'react-router';
 
 class Feed extends Component {
   constructor(props) {
@@ -25,9 +26,9 @@ class Feed extends Component {
         <Thumbnail src={description.split('"')[7]}>
           <h3>{title}</h3>
           <p>{description.split('"')[8].slice(1)}</p>
-          <p>
-            <Button bsStyle="default">Read</Button>
-          </p>
+          <Link bsClass="link" to="/article/1">
+            Link
+          </Link>
           {/* <p>
             <Button onClick={this.Add} bsStyle="default">Add</Button>
           </p> */}
